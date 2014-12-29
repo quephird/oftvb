@@ -1,0 +1,1 @@
+let rec triangle n = if n = 1 then 1 else n + triangle (n-1);;

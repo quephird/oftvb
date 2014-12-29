@@ -1,0 +1,1 @@
+let timesten x = x * 10;;
