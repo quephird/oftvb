@@ -16,8 +16,13 @@ let copy fn1 fn2 =
         let ch2 = open_out fn2 in
           copy_iter ch1 ch2
       with
-        _ -> close_in ch1
+        _ -> print_string "ERROR: Could not open file to write, ";
+             print_string fn2;
+             print_newline ();
+             close_in ch1
   with
-    Sys_error msg -> print_string msg
+    Sys_error _ -> print_string "ERROR: Could not read file, ";
+                   print_string fn1;
+                   print_newline ()
 
 ;;
