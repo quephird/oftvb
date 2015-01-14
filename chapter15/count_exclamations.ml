@@ -5,4 +5,5 @@ let count_exclamations s =
         then n := !n + 1
     done;
     !n
+
 ;;
